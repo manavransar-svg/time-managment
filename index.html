@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эффективное распределение времени</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>TimeWise</h1>
+
+        <nav class="navigation">
+            <a href="#home">Главная</a>
+            <a href="#tasks">Задачи</a>
+            <a href="#productivity">Продуктивность</a>
+            <a href="#pomodoro">Pomodoro</a>
+            <a href="#tips">Советы</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="subtitle">ТВОЁ ВРЕМЯ — ТВОЙ РЕСУРС</p>
+
+            <h2>Управляй временем.<br>Достигай большего.</h2>
+
+            <p class="description">
+                Научись планировать день, расставлять приоритеты
+                и находить время для действительно важных дел.
+            </p>
+
+            <div id="current-time" class="clock">
+                Загрузка времени...
+            </div>
+
+            <a href="#tasks" class="main-button">
+                Начать планирование
+            </a>
+        </section>
+
+        <section class="intro">
+            <h2>Что такое тайм-менеджмент?</h2>
+
+            <p>
+                Тайм-менеджмент — это умение правильно распределять
+                своё время между задачами, учёбой, отдыхом и другими
+                важными делами.
+            </p>
+        </section>
+        <section id="tasks" class="tasks">
+    <h2>Мои задачи</h2>
+
+    <div class="task-form">
+        <input id="task-input" type="text" placeholder="Напиши свою задачу">
+        <button id="add-task">Добавить</button>
+    </div>
+
+    <ul id="task-list"></ul>
+</section>
+
+<section id="productivity" class="productivity">
+    <h2>Калькулятор продуктивности</h2>
+    <p>Узнай, как ты распределяешь своё время за день.</p>
+
+    <div class="productivity-form">
+        <label for="work-hours">Работа (часы):</label>
+        <input id="work-hours" type="number" min="0" max="24" value="0">
+
+        <label for="study-hours">Учёба (часы):</label>
+        <input id="study-hours" type="number" min="0" max="24" value="0">
+
+        <label for="exercise-hours">Спорт (часы):</label>
+        <input id="exercise-hours" type="number" min="0" max="24" value="0">
+
+        <label for="rest-hours">Отдых (часы):</label>
+        <input id="rest-hours" type="number" min="0" max="24" value="0">
+
+        <label for="entertainment-hours">Развлечения (часы):</label>
+        <input id="entertainment-hours" type="number" min="0" max="24" value="0">
+
+        <button id="calculate-productivity">Рассчитать</button>
+    </div>
+
+    <div id="productivity-result">
+        Здесь появится твой результат.
+    </div>
+</section>
+
+
+<section id="pomodoro" class="pomodoro">
+    <h2>Pomodoro Timer</h2>
+    <p>Работай сосредоточенно, отдыхай вовремя.</p>
+
+    <div id="timer">25:00</div>
+
+    <div class="timer-buttons">
+        <button id="startTimer">Старт</button>
+        <button id="pauseTimer">Пауза</button>
+        <button id="resetTimer">Сброс</button>
+    </div>
+
+    <p id="timerMessage">Готов начать работу?</p>
+</section>
+
+
+<section id="recommendations" class="recommendations">
+    <h2>Рекомендации по тайм-менеджменту</h2>
+    <p>Попробуй эти методы, чтобы лучше организовать свой день.</p>
+
+    <div class="recommendation-list">
+        <article class="recommendation-card">
+            <h3>Метод Pomodoro</h3>
+            <p>Работай 25 минут, затем отдыхай 5 минут. После четырёх циклов сделай длинный перерыв.</p>
+        </article>
+
+        <article class="recommendation-card">
+            <h3>Метод GTD</h3>
+            <p>Записывай задачи, распределяй их по категориям и выбирай следующий конкретный шаг.</p>
+        </article>
+
+        <article class="recommendation-card">
+            <h3>Правило 80/20</h3>
+            <p>Определи задачи, которые дают наибольший результат, и удели им особое внимание.</p>
+        </article>
+    </div>
+
+    <button id="load-tips">Загрузить дополнительный совет</button>
+    <p id="extra-tip">Нажми кнопку, чтобы получить совет.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Связаться с нами</h2>
+    <p>Есть вопросы или предложения? Напиши нам.</p>
+
+    <form id="contact-form">
+        <label for="contact-name">Имя</label>
+        <input
+            id="contact-name"
+            type="text"
+            placeholder="Твоё имя"
+            required
+        >
+
+        <label for="contact-email">E-mail</label>
+        <input
+            id="contact-email"
+            type="email"
+            placeholder="example@mail.com"
+            required
+        >
+
+        <label for="contact-message">Сообщение</label>
+        <textarea
+            id="contact-message"
+            placeholder="Напиши сообщение..."
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">Отправить</button>
+        <p id="form-message" role="status"></p>
+    </form>
+</section>
+    </main>
+
+    <footer>
+        <p>TimeWise © 2026</p>
+    </footer>
+
+    <script src="time.js"></script>
+</body>
+</html>
